@@ -1,0 +1,273 @@
+body {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.section-title{
+    color: #3A3A3A;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+.header {
+    display: flex;
+    background: #F9F1E7;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 20px;
+}
+
+.company-logo{
+    width: 50%;
+    filter: invert(1);
+}
+
+.navigation-menu{
+    width: 50%;
+}
+
+
+.navigation-menu ul { 
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    width: 600px;
+    text-align: center;
+  }
+  .navigation-menu li { 
+    display: table-cell; 
+    position: relative; 
+  }
+  .navigation-menu li a {
+    color: #111;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  .navigation-menu li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #111;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .navigation-menu li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  
+  .navigation-menu li a:active:after { 
+    width: 100%; 
+  }
+
+  .banner{
+      width: 100%;
+      height: 100vh;
+      position: relative;
+  }
+
+  .banner img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .product-banner-details{
+      padding: 15px;
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(7px);
+      position: absolute;
+      bottom: 3%;
+      right: 5%;
+      cursor: pointer;
+  }
+
+  .product-banner-details h2{
+    margin: 5px 0px 0px 0px;
+  }
+
+  .product-banner-details p{
+    margin: 5px 0px 0px 0px;
+  }
+
+  .product-banner-details small{
+      color: gray;
+  }
+
+  .product-banner-details .goto-product{
+      align-self: flex-end;
+  }
+
+  .categories {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .categories .category{ 
+      width: 350px;
+      height: 450px;
+      position: relative;
+  }
+
+  .category img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .categories i {
+      align-self: center;
+      font-size: 3.25rem;
+      color: #7E7E7E;
+  }
+
+  .inside-category{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      top: 10%;
+      color: white;
+  }
+
+  .inside-category button {
+      background: none;
+      padding: 0.5rem 1.75rem;
+      color: white;
+      font-weight: bold;
+      border: 2px solid #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+  }
+
+  .inside-category button:hover {
+    background: #fff;
+    color: #111;
+  }
+
+  .products{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 35px;
+      margin-right: 35px;
+      gap: 25px;
+  }
+  .product{
+      height: 440px;
+      flex: 1 0 21%;
+      background: #F4F5F7;
+      position: relative;
+      transition: .4s ease;
+  }
+  
+  .product-image{
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+  }
+  .product-details{
+    width: 100%;
+    height: 30%;
+  }
+
+  .product-details h2 {
+      margin: 4px 0px;
+      font-weight: 300;
+      padding-left: 6px;
+  }
+
+  .product-details small{
+    color: gray;
+    padding-left: 6px;
+  }
+
+  .product-details p {
+      padding-left: 6px;
+  }
+
+  .product-overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0, 0.4);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .product:hover .product-overlay{
+      opacity: 1;
+      transition: .4s ease;
+  }
+
+  .product-overlay button {
+    width: 60%;
+    background: #fff;
+    padding: 0.75rem 0.325rem;
+    border: none;
+    color: #E89F71;
+    cursor: pointer;
+  }
+
+  .share-like{
+      color: white;
+      margin-top: 0.325rem;
+  }
+  .share-like i {
+      cursor: pointer;
+  }
+
+  .show-more-btn{
+      display: flex;
+      justify-content: center;
+      margin-top: 35px;
+  }
+  
+  .show-more-btn button {
+      width: 245px;
+      height: 48px;
+      border: 2px solid #E89F71;
+      background: none;
+      color: #E89F71;
+      cursor: pointer;
+  }
+
+  .services{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+  }
+  .service{
+      display: flex;
+      justify-content: center;
+      flex: 1 0 21%;
+  }
+  
+  .service-text{
+      margin-left: 6px;
+  }
+
+  .service-text small{
+      color: gray;
+  }
+
+  .service p {
+      margin: 0px;
+  }
