@@ -336,7 +336,7 @@ body {
   }
 
   .footer-section li:hover{
-      color: black;
+      color: #e99d6e
   }
 
   .footer-section a {
@@ -365,6 +365,7 @@ body {
       height: 13px;
       background: #7E7E7E;
       border-radius: 100%;
+      cursor: pointer;
   }
 
   .active-cirlce{
@@ -383,6 +384,9 @@ body {
         color: white;
         border: none;
         margin-left: 5px;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
   }
 
   .stay-updated-action input{
