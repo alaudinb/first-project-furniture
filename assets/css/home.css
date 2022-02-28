@@ -405,6 +405,7 @@ body {
 
     .navigation-menu {
         margin-top: 15px;
+        margin-right: 0px;
     }
 
     .navigation-menu ul li a {
