@@ -16,7 +16,7 @@ function getProducts(){
                     <div class="product-details">
                         <h2>${product.name}</h2>
                         <small>${product.category_name}</small>
-                        <p>${product.price}</p>
+                        <p>${product.price}$</p>
                     </div>
                     <div class="product-overlay">
                         <button onclick="addToCart(${i})">Add to cart</button>
@@ -53,7 +53,6 @@ function addToCart(index){
     if(!found_product){
         storage_cart.push(current_product);
     }
-    console.log(storage_cart);
     let cart_length = storage_cart.length;
     document.getElementById('cart').setAttribute('counter',`${cart_length}`)
     localStorage.cart = JSON.stringify(storage_cart);
