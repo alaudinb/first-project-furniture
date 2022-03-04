@@ -29,6 +29,7 @@ body {
     list-style: none; 
     display: table;
     text-align: center;
+    margin-top: 1rem;
   }
   .navigation-menu li { 
     display: table-cell; 

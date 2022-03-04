@@ -1,0 +1,14 @@
+.cart-details{
+    float: right;
+    height: 190px;
+    display: none;
+}
+
+.delete-btn{
+    border: none;
+    background: none;
+    color: black;
+}
+.delete-btn i {
+    color: black;
+}

@@ -1,7 +1,9 @@
 
 const api = 'https://621d53b0806a09850a57b4ee.mockapi.io/api/'; 
 var all_products = [];
-localStorage.setItem('cart',JSON.stringify([]));
+if(!localStorage.cart){
+    localStorage.setItem('cart',JSON.stringify([]));
+}
 function getProducts(){
     axios.get(api + 'products').then(response => {
          all_products = response.data;
@@ -35,16 +37,23 @@ getProducts();
 
 function addToCart(index){
     var current_product = all_products[index];
-    var storage_cart = JSON.parse(localStorage.cart);
-    if(storage_cart.length){
-        storage_cart.forEach(e =>{
-            if(e.id != current_product.id){
-                storage_cart.push(current_product);
+    var storage_cart = [];
+    var found_product = false;
+    if(localStorage.cart){
+        storage_cart = JSON.parse(localStorage.cart);
+    }
+
+    if(storage_cart.length > 0){
+        for(let i =0; i< storage_cart.length; i++){
+            if(storage_cart[i].id == current_product.id){
+                found_product = true;
             }
-        })
-    } else { 
+        }
+    }
+    if(!found_product){
         storage_cart.push(current_product);
     }
+    console.log(storage_cart);
     let cart_length = storage_cart.length;
     document.getElementById('cart').setAttribute('counter',`${cart_length}`)
     localStorage.cart = JSON.stringify(storage_cart);
