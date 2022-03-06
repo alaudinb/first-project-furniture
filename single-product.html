@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.binni.biz/wp-content/themes/Binni/dist/img/favicon.ico">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/single-products.css">
+    <title>Binni | Product Name </title>
+</head>
+<body>
+    <header class="header">
+        <div class="company-logo">
+            <a href="index.html"><img src="https://www.binni.biz/wp-content/themes/Binni/dist/img/binni_logo.svg" alt=""></a>
+        </div>
+        <div class="navigation-menu">
+            <ul class="mt-3">
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#our-products">Our Products</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li class="cart" id="cart"><a href="shop-cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div id="singleProduct" class="single-product d-flex w-75 mt-5">
+        <div class="product-image col-8 d-flex justify-content-center">
+            <img width="600" height="400" src="https://imgur.com/nzWiFil.png" alt="">
+        </div>
+
+        <div class="product-details col-4 p-5 d-flex flex-column shadow">
+            <h2 class="p-0">Product name</h2>
+            <h5 class="text-secondary mt-3 ms-2 mb-5">Product category</h5>
+            <div class="select-quantity">
+                <Label for="#selectQuantity">Select quantity: </Label>
+                <select id="selectQuantity" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="price-button d-flex justify-content-between align-items-center mt-5">
+                <h5>4000 $ </h5>
+                <button class="btn btn-success py-2 px-5" type="button">Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-description w-75 mt-3">
+        <h3 class="text-black text-start ms-5">Product description</h3>
+        <p class="ms-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates quia. Reprehenderit repudiandae asperiores consectetur? Facilis rem repellat cumque quae ea perferendis sit doloremque magnam, pariatur delectus provident iste nostrum.</p>
+    </div>
+
+    <script src="assets/js/single-product.js"></script>
+</body>
+</html>
